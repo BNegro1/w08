@@ -1,16 +1,15 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
+    background: url(img/bg.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    font-family: Cambria;
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.406);
-    border-radius: 20px;
+    background-color: #24243e;
+    border-radius: 4px;
 }
 
 .navbar .btn {
-    color: white; /* Texto blanco para mayor contraste */
-    border-color: white; /* Borde blanco */
+    color: white; 
+
 }
