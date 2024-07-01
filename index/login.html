@@ -8,7 +8,9 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             height: 100vh;
+            margin: 0;
             background-color: #343a40;
             color: #fff;
         }
@@ -16,6 +18,7 @@
             width: 250px;
             background: #212529;
             padding: 20px;
+            flex-shrink: 0;
         }
         .content {
             flex-grow: 1;
@@ -28,6 +31,8 @@
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
         }
         .login-title {
             margin-bottom: 30px;
@@ -35,29 +40,34 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>DUOC Desk</h2>
-        <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Login</a></li>
-            <li><a href="#" class="text-white">Dashboard</a></li>
-            <li><a href="#" class="text-white">Data Display</a></li>
-        </ul>
-    </div>
-    <div class="content">
-        <div class="login-container">
-            <h2 class="login-title text-center">Login</h2>
-            <form>
-                <div class="form-group">
-                    <label for="username">Usuario</label>
-                    <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario">
-                </div>
-                <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Ingresa</button>
-            </form>
+    <div class="d-flex flex-column flex-md-row">
+        <div class="sidebar">
+            <h2>DUOC Desk</h2>
+            <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Login</a></li>
+                <li><a href="#" class="text-white">Dashboard</a></li>
+                <li><a href="#" class="text-white">Data Display</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="login-container">
+                <h2 class="login-title text-center">Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario" required autocomplete="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Ingresa</button>
+                </form>
+            </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

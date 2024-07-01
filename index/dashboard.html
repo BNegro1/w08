@@ -3,51 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Dashboard - DUOC Desk</title>
+    <title>DUOC Desk Dashboard</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            height: 100vh;
-            background-color: #f8f9fa;
-        }
-        .sidebar {
-            width: 250px;
-            background: #212529;
-            padding: 20px;
-            color: #fff;
-        }
-        .content {
-            flex-grow: 1;
-            padding: 20px;
-        }
-        .section-title {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h2>DUOC Desk</h2>
-        <ul class="list-unstyled">
-            <li><a href="#" class="text-white">I+D+I+I</a></li>
-            <li><a href="#" class="text-white">DARA</a></li>
-            <li><a href="#" class="text-white">Coordinación Docente</a></li>
-            <li><a href="#" class="text-white">Financiamiento</a></li>
-            <li><a href="#" class="text-white">Asuntos Estudiantiles</a></li>
-        </ul>
-    </div>
-    <div class="content">
-        <h1 class="text-center">Acceso Centralizado</h1>
-        <div class="section-title">
-            <h3>Gestión de Documentos</h3>
+    <div class="d-flex">
+        <div class="sidebar">
+            <h2 class="text-center py-3">DUOC Desk</h2>
+            <ul class="list-unstyled">
+                <li><button class="btn btn-block btn-primary my-2" onclick="showContent('dara')">DARA</button></li>
+                <li><button class="btn btn-block btn-danger my-2" onclick="showContent('coordinacion-docente')">Coordinación Docente</button></li>
+                <li><button class="btn btn-block btn-pink my-2" onclick="showContent('financiamiento')">Financiamiento</button></li>
+                <li><button class="btn btn-block btn-purple my-2" onclick="showContent('asuntos-estudiantiles')">Asuntos Estudiantiles</button></li>
+                <li><button class="btn btn-block btn-success my-2" onclick="showContent('reglamentos')">Reglamentos, Instructivos</button></li>
+                <li><button class="btn btn-block btn-warning my-2" onclick="showContent('administrativos')">Administrativos (SDEG)</button></li>
+                <li><button class="btn btn-block btn-info my-2" onclick="showContent('idi')">I+D+I</button></li>
+            </ul>
         </div>
-        <div class="row">
-            <div class="col-md-4">Almacenar</div>
-            <div class="col-md-4">Organizar</div>
-            <div class="col-md-4">Colaborar en documentos relacionados</div>
+        <div class="content p-4 flex-grow-1">
+            <div id="dara" class="content-section">
+                <h3>DARA</h3>
+                <ul>
+                    <li>Acceso Centralizado</li>
+                    <li>Almacenar</li>
+                    <li>Organizar</li>
+                    <li>Colaborar en documentos relacionados</li>
+                </ul>
+            </div>
+            <div id="coordinacion-docente" class="content-section" style="display:none;">
+                <h3>Coordinación Docente</h3>
+                <!-- Add relevant content here -->
+            </div>
+            <div id="financiamiento" class="content-section" style="display:none;">
+                <h3>Financiamiento</h3>
+                <!-- Add relevant content here -->
+            </div>
+            <div id="asuntos-estudiantiles" class="content-section" style="display:none;">
+                <h3>Asuntos Estudiantiles</h3>
+                <!-- Add relevant content here -->
+            </div>
+            <div id="reglamentos" class="content-section" style="display:none;">
+                <h3>Reglamentos, Instructivos</h3>
+                <!-- Add relevant content here -->
+            </div>
+            <div id="administrativos" class="content-section" style="display:none;">
+                <h3>Administrativos (SDEG)</h3>
+                <!-- Add relevant content here -->
+            </div>
+            <div id="idi" class="content-section" style="display:none;">
+                <h3>I+D+I</h3>
+                <!-- Add relevant content here -->
+            </div>
         </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
