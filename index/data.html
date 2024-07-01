@@ -7,56 +7,127 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
+            display: flex;
+            height: 100vh;
             background-color: #f8f9fa;
-            padding-top: 70px;
+        }
+        .sidebar {
+            width: 250px;
+            background: #343a40;
+            padding: 20px;
+            color: #fff;
+        }
+        .sidebar h2 {
+            color: #ffc107;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #fff;
         }
         .data-table {
             margin-top: 20px;
         }
+        .table-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            margin-right: 10px;
+            flex-grow: 1;
+        }
+        .btn-custom {
+            background-color: #6f42c1;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">DUOC Desk</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">DARA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Entradas</a>
-                </li>
-            </ul>
+    <div class="sidebar">
+        <h2>DUOC Desk</h2>
+        <ul class="list-unstyled">
+            <li><a href="#" class="text-white">DARA</a></li>
+            <li><a href="#" class="text-white">Entradas</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="search-bar">
+            <input type="text" class="form-control" placeholder="12765098-1">
+            <button class="btn btn-custom"><i class="fas fa-search"></i></button>
         </div>
-    </nav>
-    <div class="container">
-        <div class="data-table">
-            <table class="table table-striped">
+        <div class="table-container">
+            <label for="entries">Mostrar</label>
+            <select class="form-control d-inline w-auto" id="entries">
+                <option>10</option>
+                <option>20</option>
+                <option>30</option>
+            </select>
+            <span>entradas</span>
+            <table class="table table-striped mt-3">
                 <thead>
                     <tr>
-                        <th>Entradas</th>
-                        <th>Acción</th>
+                        <th>Tipo de Documento</th>
+                        <th>Descripción</th>
+                        <th>Año</th>
+                        <th>Semestre</th>
+                        <th>Malla Curricular</th>
+                        <th>Carrera</th>
+                        <th>Visualizar</th>
+                        <th>Descargar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>12765098-1</td>
-                        <td><button class="btn btn-primary">Mostrar</button></td>
+                        <td>Contrato Prestación de Servicios</td>
+                        <td>Contrato Manual</td>
+                        <td>2023</td>
+                        <td>1</td>
+                        <td>1112358</td>
+                        <td>Auditoría</td>
+                        <td><button class="btn btn-light btn-sm"><i class="fas fa-file-pdf"></i></button></td>
+                        <td><button class="btn btn-light btn-sm"><i class="fas fa-download"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Amonestación</td>
+                        <td>Amonestación Escrita</td>
+                        <td>2022</td>
+                        <td>2</td>
+                        <td>1112358</td>
+                        <td>Auditoría</td>
+                        <td><button class="btn btn-light btn-sm"><i class="fas fa-file-pdf"></i></button></td>
+                        <td><button class="btn btn-light btn-sm"><i class="fas fa-download"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Contrato Prestación de Servicios</td>
+                        <td>Contrato Manual</td>
+                        <td>2022</td>
+                        <td>2</td>
+                        <td>1112358</td>
+                        <td>Auditoría</td>
+                        <td><button class="btn btn-light btn-sm"><i class="fas fa-file-pdf"></i></button></td>
+                        <td><button class="btn btn-light btn-sm"><i class="fas fa-download"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Licencia de Enseñanza Media</td>
+                        <td>Documento Original</td>
+                        <td>2000</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><button class="btn btn-light btn-sm"><i class="fas fa-file-pdf"></i></button></td>
+                        <td><button class="btn btn-light btn-sm"><i class="fas fa-download"></i></button></td>
                     </tr>
                 </tbody>
             </table>
-            <div class="form-group">
-                <label for="entries">Mostrar entradas</label>
-                <select class="form-control" id="entries">
-                    <option>10</option>
-                    <option>20</option>
-                    <option>30</option>
-                </select>
-            </div>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>

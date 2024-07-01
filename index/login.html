@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DUOC Desk</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #343a40;
+            color: #fff;
+        }
+        .sidebar {
+            width: 250px;
+            background: #212529;
+            padding: 20px;
+        }
+        .content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            background: #212529;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .login-title {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>DUOC Desk</h2>
+        <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Login</a></li>
+            <li><a href="#" class="text-white">Dashboard</a></li>
+            <li><a href="#" class="text-white">Data Display</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="login-container">
+            <h2 class="login-title text-center">Login</h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Ingresa</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
