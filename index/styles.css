@@ -18,3 +18,12 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.card {
+    margin-bottom: 20px;
+}
+.card-deck {
+    margin-bottom: 20px;
+}
+.card-body {
+    text-align: center;
+}
