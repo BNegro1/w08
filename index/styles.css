@@ -47,7 +47,7 @@ body {
     background-color: #343a40;
     color: white;
     padding: 15px;
-    min-height: 100vh; /* Ensure sidebar stretches to the full viewport height */
+    min-height: 100vh; 
     position: sticky;
     top: 0;
 }
