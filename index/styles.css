@@ -1,70 +1,20 @@
+
 body {
     display: flex;
     height: 100vh;
-    margin: 0;
-    background-color: #343a40;
-
+    background-color: #f8f9fa;
 }
-
 .sidebar {
     width: 250px;
     background: #212529;
     padding: 20px;
-    flex-shrink: 0;
-}
-
-.sidebar h2 {
     color: #fff;
 }
-
-.sidebar .btn {
-    color: #fff;
-    font-weight: bold;
-}
-
-.sidebar .btn-primary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
-
-.sidebar .btn-danger {
-    background-color: #ff5733;
-    border-color: #ff5733;
-}
-
-.sidebar .btn-pink {
-    background-color: #e83e8c;
-    border-color: #e83e8c;
-}
-
-.sidebar .btn-purple {
-    background-color: #6f42c1;
-    border-color: #6f42c1;
-}
-
-.sidebar .btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
-}
-
-.sidebar .btn-warning {
-    background-color: #ffc107;
-    border-color: #ffc107;
-}
-
-.sidebar .btn-info {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-}
-
 .content {
+    flex-grow: 1;
     padding: 20px;
 }
-
-.content-section {
-    display: none;
-}
-
-.content-section.active {
-    display: block;
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
