@@ -129,13 +129,34 @@
                     borderWidth: 1
                 }]
             },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+options: {
+    scales: {
+        y: {
+            beginAtZero: true,
+            ticks: {
+                color: '#ecf0f1' // Color de las etiquetas del eje Y
+            },
+            grid: {
+                color: '#7f8c8d' // Color de las líneas de la cuadrícula
             }
+        },
+        x: {
+            ticks: {
+                color: '#ecf0f1' // Color de las etiquetas del eje X
+            },
+            grid: {
+                color: '#7f8c8d' // Color de las líneas de la cuadrícula
+            }
+        }
+    },
+    plugins: {
+        legend: {
+            labels: {
+                color: '#ecf0f1' // Color del texto de la leyenda
+            }
+        }
+    }
+}
         });
 
         function exportToPDF() { // Exportar a PDF (Función principal)
