@@ -1,7 +1,8 @@
 
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
     background-color: #f8f9fa;
 }
 .sidebar {
@@ -40,4 +41,17 @@ body {
 }
 .stat-label {
     font-size: 1.2rem;
+}
+
+.sidebar {
+    background-color: #343a40;
+    color: white;
+    padding: 15px;
+    min-height: 100vh; /* Ensure sidebar stretches to the full viewport height */
+    position: sticky;
+    top: 0;
+}
+.content {
+    flex: 1;
+    padding: 20px;
 }

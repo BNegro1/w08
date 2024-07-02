@@ -83,8 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-md-6">
+            <div class="row-md-6">
                     <div class="card">
                         <div class="card-header">
                             Documentos por Mes
@@ -94,16 +93,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            Actividad de Usuarios
-                        </div>
-                        <div class="card-body">
-                            <canvas id="userActivityChart"></canvas>
-                        </div>
+                <div class="card">
+                    <div class="card-header">
+                        Actividad de Usuarios
                     </div>
-                </div>
+                    <div class="card-body">
+                        <canvas id="userActivityChart"></canvas>
+                    </div>
             </div>
             <div class="row mt-4">
                 <div class="col text-center">
@@ -120,7 +116,6 @@
     <script>
         const { jsPDF } = window.jspdf;
 
-        
         const docsByMonthCtx = document.getElementById('docsByMonthChart').getContext('2d'); // Documentación por mes (gráfico de barras)
         const docsByMonthChart = new Chart(docsByMonthCtx, {
             type: 'bar',
@@ -143,31 +138,7 @@
             }
         });
 
-        
-        const userActivityCtx = document.getElementById('userActivityChart').getContext('2d'); // Actividad de Usuarios Chart por gráfico de barras
-        const userActivityChart = new Chart(userActivityCtx, {
-            type: 'line',
-            data: {
-                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
-                datasets: [{
-                    label: 'Usuarios Activos',
-                    data: [3, 2, 1, 4, 5],
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        
-        function exportToPDF() { // Expoprtar a PDF (FUnción principal)
+        function exportToPDF() { // Exportar a PDF (Función principal)
             const doc = new jsPDF();
             doc.text("Resumen y Estadísticas", 10, 10);
             doc.addPage();
