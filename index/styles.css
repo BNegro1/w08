@@ -21,9 +21,23 @@ body {
 .card {
     margin-bottom: 20px;
 }
-.card-deck {
-    margin-bottom: 20px;
+.card-header {
+    background-color: #212529;
+    color: #fff;
 }
-.card-body {
+.content {
     text-align: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.stat-card {
+    text-align: center;
+}
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.stat-label {
+    font-size: 1.2rem;
 }
